@@ -1,0 +1,67 @@
+html {
+  scroll-behavior: smooth !important;
+  overflow-x: hidden !important;
+}
+
+::-webkit-scrollbar {
+  background: #01051e;
+  width: 0.6rem;
+}
+::-webkit-scrollbar-track {
+  background: #01051e;
+}
+::-webkit-scrollbar-thumb {
+  background: white;
+  /* border-radius: 1rem; */
+  transition: all 0.5s ease;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(240, 67%, 94%);
+}
+
+header {
+  transition: all 0.5s ease;
+}
+
+header.sticky {
+  z-index: 99;
+}
+
+section#home {
+  z-index: -1 !important;
+}
+
+#featuresCard {
+  transition: all 0.5s ease;
+}
+
+#featuresCard:hover {
+  transform: scale(1.02);
+}
+
+#gotop {
+  transition: opacity 0.4s ease-in-out;
+}
+
+#gotop.active {
+  opacity: 1;
+}
+
+#mediaContainer {
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.card {
+  transition: 0.2s linear !important;
+}
+
+.card:hover {
+  transform: scale(1.05) !important;
+  border-color: #fff !important;
+  background: hsla(232, 94%, 10%, 0.4);
+}
+
+#textWrapper:hover #mediaContainer {
+  opacity: 1;
+}

@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+
+* {
+  font-family: Poppins !important;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.nav__links {
+  @apply hover:text-color-secondary ease-in duration-200;
+}
+
+.nav__links.active {
+  @apply text-color-secondary;
+}
+
+.user-text {
+  display: none;
+}
+
+.user-text.active-text {
+  display: block;
+  animation: moveup 1s linear forwards;
+}
+
+.user__profile {
+  @apply h-20 w-20 rounded-full p-1 m-3 cursor-pointer;
+  transition: all 0.2s ease;
+  border: 2px solid transparent;
+}
+
+@keyframes moveup {
+  0% {
+    margin-top: 40px;
+    opacity: 0;
+  }
+
+  50% {
+    margin-top: 20px;
+    opacity: 0.1;
+  }
+
+  100% {
+    margin-top: 0px;
+    opacity: 1;
+  }
+}
+
+.card {
+  perspective: 1000px;
+}
+
+.front,
+.back {
+  backface-visibility: hidden;
+  transition: all 0.4s ease;
+}
+
+.front {
+  overflow: hidden;
+}
+
+.user__profile.active {
+  @apply border-color-secondary;
+}
+
+.btn {
+  @apply bg-color-secondary px-6 py-3 rounded-md capitalize font-bold hover:opacity-80 ease-in duration-200;
+}
+
+.btn.mt-10:hover {
+  opacity: 0.8 !important;
+}
+
+.title {
+  @apply text-3xl mb-4 md:text-4xl font-bold leading-snug;
+}
+
+.first__blob {
+  @apply absolute w-80 h-80 bg-color-blob -left-5 -z-10 blur-2xl opacity-30 overflow-hidden rounded-full;
+}
+
+.second__blob {
+  @apply absolute w-80 h-80 bg-color-secondary top-96 sm:bottom-0 right-5 -z-10 blur-2xl opacity-30 overflow-hidden rounded-full;
+}
+
+.card_btn {
+  @apply w-full px-9 py-3 bg-color-primary-dark rounded-md capitalize font-bold hover:bg-color-secondary ease-in duration-200;
+}
+
+.social__media-cta {
+  margin: 0 0.1rem;
+  width: 2.2rem !important;
+  height: 2.2rem !important;
+  background: hsl(232, 95%, 12%);
+  @apply flex items-center justify-center rounded-full text-color-secondary ease-in duration-200;
+}
+
+.social__media-cta:hover {
+  @apply text-color-white;
+  background: hsl(232, 95%, 10%);
+  transform: translateY(-0.5rem);
+}
